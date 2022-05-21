@@ -2,13 +2,13 @@ import './App.css';
 // Import components
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 
 function App() {
-  const URL = "https://backend-portfolio-sunghunp.herokuapp.com/"
+  const URL = "https://backend-portfolio-sunghunp.herokuapp.com/";
 
   return (
     <div className="App">
