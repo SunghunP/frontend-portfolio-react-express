@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function About({ URL }) {
   // create state to hold data from backend
@@ -12,18 +12,23 @@ export default function About({ URL }) {
     const data = await response.json();
     // set the about state to the data
     setAbout(data);
+    console.log(data)
   }
+
+  // make initial call for the data 
+  useEffect(() => {getAboutData()}, []);
 
   function loaded() {
-    <div>
-      <h2>{about.name}</h2>
-      <h3>{about.email}</h3>
-      <p>{about.bio}</p>
-    </div>
+    return (
+      <div>
+        <h2>{about.name}</h2>
+        <h3>{about.email}</h3>
+        <p>{about.bio}</p>
+      </div>
+    )
+
   }
 
-  return(
-    about ? loaded() : <h1>Loading...</h1>
-  )
+  return about ? loaded() : <h1>Loading...</h1>
 }
 
