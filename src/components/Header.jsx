@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   padding: 5px;
-`
+  text-align: center;
+`;
 
 const StyledNav = styled.nav`
   display: flex;
@@ -14,7 +16,8 @@ const StyledNav = styled.nav`
   padding: 8px;
   width: 90%;
   margin: auto;
-`
+`;
+
 export default function Header() {
   return (
     <StyledHeader>
@@ -25,5 +28,5 @@ export default function Header() {
         <Link to="/projects" >PROJECTS</Link>
       </StyledNav>
     </StyledHeader>
-  )
-}
+  );
+};
