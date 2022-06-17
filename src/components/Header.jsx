@@ -7,6 +7,15 @@ const StyledHeader = styled.header`
   margin-bottom: 15px;
   padding: 5px;
   text-align: center;
+  nav {
+    a {
+      text-decoration: none;
+      color: black;
+      :hover {
+        color: lightseagreen;
+      }
+    }
+  }
 `;
 
 const StyledNav = styled.nav`
