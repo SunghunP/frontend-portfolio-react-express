@@ -8,6 +8,9 @@ const StyledDiv = styled.div`
   justify-content: center;
   margin: 30px;
   padding: 10px;
+  p {
+    text-align: center;
+  }
 `
 
 export default function About({ URL }) {
